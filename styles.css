@@ -1,0 +1,243 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background: #4a7745; /* Verde escuro para o cabeçalho */
+    color: #fff;
+    padding: 20px 0; /* Aumentado para criar mais espaço */
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 20px; /* Aumentado para mais espaço entre os links */
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #c7ddb5; /* Verde claro ao passar o mouse */
+}
+
+.banner {
+    position: relative;
+    color: #fff;
+    text-align: center;
+    padding: 120px 0; /* Aumentado para criar mais espaço */
+    background-color: #8a5a44; /* Marrom como cor de fundo de reserva */
+}
+
+.banner h1 {
+    font-size: 3.5em; /* Aumentado para maior destaque */
+    margin: 0;
+    position: relative;
+    z-index: 2;
+}
+
+.banner p {
+    font-size: 1.7em; /* Aumentado para mais visibilidade */
+    margin: 15px 0;
+    position: relative;
+    z-index: 2;
+}
+
+.banner button {
+    padding: 15px 25px; /* Aumentado para botões mais visíveis */
+    font-size: 1.1em;
+    background-color: #4a7745; /* Verde para os botões */
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    position: relative;
+    z-index: 2;
+}
+
+.banner button:hover {
+    background-color: #355e30; /* Verde mais escuro ao passar o mouse */
+}
+
+.banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    opacity: 0.7; /* Ajustado para uma leve transparência */
+}
+
+.products {
+    padding: 60px 20px; /* Aumentado para mais espaço */
+    background-color: #fff;
+    text-align: center;
+}
+
+.products h2 {
+    margin-bottom: 30px;
+    font-size: 2.2em;
+    color: #4a7745; /* Verde para os títulos das seções */
+}
+
+.product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px; /* Mais espaço entre os produtos */
+}
+
+.product {
+    background: #f9f9f9;
+    padding: 20px; /* Aumentado para mais espaço interno */
+    border: 1px solid #ddd;
+    width: 220px;
+    text-align: left;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.product:hover {
+    transform: translateY(-5px);
+}
+
+.product img {
+    max-width: 100%;
+    height: auto;
+    border-bottom: 2px solid #8a5a44; /* Marrom para um detalhe nas imagens */
+    margin-bottom: 15px;
+}
+
+.product h3 {
+    font-size: 1.4em;
+    color: #4a7745; /* Verde para os títulos dos produtos */
+    margin: 10px 0;
+}
+
+.product p {
+    margin: 5px 0;
+    color: #666;
+}
+
+.testimonials {
+    background-color: #e0e7de; /* Verde claro para a seção de depoimentos */
+    padding: 60px 20px; /* Aumentado para mais espaço */
+    text-align: center;
+}
+
+.testimonials h2 {
+    font-size: 2.2em;
+    margin-bottom: 30px;
+    color: #4a7745; /* Verde para o título */
+}
+
+.testimonials .testimonial {
+    margin: 20px 0;
+    font-style: italic;
+    color: #555;
+}
+
+.follow {
+    padding: 60px 20px; /* Aumentado para mais espaço */
+    background-color: #fff;
+    text-align: center;
+}
+
+.follow h2 {
+    font-size: 2.2em;
+    color: #4a7745; /* Verde para o título */
+    margin-bottom: 30px;
+}
+
+.follow img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+footer {
+    background: #8a5a44; /* Marrom para o rodapé */
+    color: #fff;
+    text-align: center;
+    padding: 30px 0; /* Aumentado para mais espaço */
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9em;
+}
+
+footer nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 15px 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Mais espaço entre os links */
+}
+
+footer nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer nav ul li a:hover {
+    color: #c7ddb5; /* Verde claro ao passar o mouse */
+}
+
+.about-us {
+    background-color: #e0e7de; /* Verde claro para combinar com o estilo do site */
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.about-us h2 {
+    font-size: 2.2em;
+    color: #4a7745; /* Verde para o título */
+    margin-bottom: 30px;
+}
+
+.about-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.about-image {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+}
+
+.about-text {
+    max-width: 500px;
+    text-align: left;
+    color: #555;
+}
+
+.about-text p {
+    margin-bottom: 15px;
+    font-size: 1.1em;
+    line-height: 1.6;
+}
