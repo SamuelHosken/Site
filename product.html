@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produto</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+
+        .header {
+            background-color: #f9f9f9;
+            padding: 25px 0;
+        }
+
+        .header .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 15px;
+        }
+
+        .nav-container {
+            display: flex;
+            gap: 15px;
+        }
+
+        .nav-link {
+            color: #000;
+            font-weight: 300;
+            text-decoration: none;
+            padding: 5px 10px;
+        }
+
+        .nav-link:hover,
+        .nav-link.active {
+            color: #73D62A;
+        }
+
+        .bnt-voltar {
+            display: inline-block;
+            padding: 8px 20px;
+            font-size: 16px;
+            color: #000000;
+            background-color: none;
+            border: 1px solid #000000;
+            border-radius: 5px;
+            text-decoration: none;
+            text-align: center;
+            transition: background-color 0.3s;
+        }
+
+        .bnt-voltar:hover {
+            background-color: #ffffff;
+        }
+
+        .product-container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            display: flex;
+            justify-content: start;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .thumbnail-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            margin-right: 20px;
+        }
+
+        .thumbnail {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            border: 2px solid transparent;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .thumbnail.active {
+            border-color: #73D62A;
+        }
+
+        .main-image-container {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .main-image {
+            max-width: 100%;
+            max-height: 400px;
+            object-fit: contain;
+            border-radius: 8px;
+        }
+
+        .product-details {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 0 20px;
+        }
+
+        .product-title {
+            font-size: 1.8rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .product-description {
+            color: #555;
+            font-size: 1rem;
+            margin-bottom: 20px;
+        }
+
+        .product-price {
+            font-size: 1.5rem;
+            color: #000000;
+            margin-bottom: 20px;
+        }
+
+        .color-options {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .color-box {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            border: 2px solid transparent;
+            cursor: pointer;
+        }
+
+        .color-box.active {
+            border-color: #73D62A;
+        }
+
+        .buy-now-btn {
+            margin-top: 20px;
+            background-color: #000000;
+            color: rgb(255, 255, 255);
+            border: none;
+            padding: 15px;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            max-width: 200px;
+        }
+
+        .buy-now-btn:hover {
+            cursor: auto;
+            background-color: #254322;
+        }
+
+        .product-img {
+            display: flex-box;
+            justify-items: center;
+
+
+        }
+
+        .product-img h2 {
+            margin-top: 60px;
+            font-size: 1.5rem;
+        }
+
+        .product-img p {
+            color: #888888;
+            text-align: center;
+        }
+
+        .product-img .big-img {
+            margin-top: 30px;
+            max-width: 1250px;
+            width: 100%;
+            height: auto;
+            border-radius: 20px;
+        }
+
+        .product-img .sm-img {
+            margin: 30px 0;
+            gap: 35px;
+            display: flex;
+        }
+
+        .product-img .sm-img img {
+            max-width: 610px;
+            border-radius: 20px;
+        }
+
+        @media (max-width: 1024px) {
+            .product-container {
+                flex-direction: column;
+                align-items: center;
+                padding: 10px;
+            }
+
+            .thumbnail-container {
+                flex-direction: row;
+                gap: 10px;
+                margin-bottom: 20px;
+                margin-right: 0;
+            }
+
+            .main-image {
+                max-width: 90%;
+                height: auto;
+            }
+
+            .product-details {
+                text-align: center;
+                padding: 0;
+            }
+
+            .product-title {
+                font-size: 1.5rem;
+            }
+
+            .product-description {
+                font-size: 0.9rem;
+            }
+
+            .product-price {
+                font-size: 1.3rem;
+            }
+
+            .buy-now-btn {
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header .container {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .nav-container {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .thumbnail-container {
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .thumbnail {
+                width: 60px;
+                height: 60px;
+            }
+
+            .product-img {
+                text-align: center;
+            }
+
+            .product-img h2 {
+                font-size: 1.2rem;
+            }
+
+            .product-img .big-img {
+                max-width: 90%;
+            }
+
+            .product-img .sm-img {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .product-img .sm-img img {
+                width: 80%;
+                margin-bottom: 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .product-title {
+                font-size: 1.2rem;
+            }
+
+            .product-description {
+                font-size: 0.8rem;
+            }
+
+            .product-price {
+                font-size: 1.2rem;
+            }
+
+            .buy-now-btn {
+                font-size: 0.9rem;
+                padding: 10px;
+            }
+
+            .thumbnail {
+                width: 50px;
+                height: 50px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="d-flex align-items-center">
+                <img id="logo-img" src="/assets/logo_preta.png" alt="Logo" style="height: 30px;">
+            </div>
+            <nav class="nav-container">
+                <a href="#" class="nav-link">Home</a>
+                <a href="#" class="nav-link">Shop</a>
+                <a href="#" class="nav-link">Especificações</a>
+                <a href="#" class="nav-link">Sobre Nós</a>
+            </nav>
+            <div>
+                <a id="bnt-voltar" href="index.html" class="bnt-voltar">Voltar</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Product Section -->
+    <div class="product-container">
+
+        <!-- Miniaturas -->
+        <div class="thumbnail-container">
+            <img src="assets/Eco01.jpg" alt="Miniatura 1" class="thumbnail active">
+            <img src="assets/Eco02.jpg" alt="Miniatura 2" class="thumbnail">
+            <img src="assets/Eco03.jpg" alt="Miniatura 3" class="thumbnail">
+        </div>
+
+        <!-- Imagem Principal -->
+        <div class="main-image-container">
+            <img src="assets/Eco01.jpg" alt="Eco Bag Grande" class="main-image">
+        </div>
+
+        <!-- Detalhes do Produto -->
+        <div class="product-details">
+            <div class="product-title">Tolus Spring Collection - Eco Bag</div>
+            <div class="product-price">$65</div>
+            <div class="product-description">
+                Conheça a coleção Tolus Spring, onde estilo e sustentabilidade caminham juntos. Feita com materiais 100%
+                sustentáveis, esta eco bag é resistente, espaçosa e prática, perfeita para o dia a dia. Seja para
+                compras, passeios ou para dar um toque moderno ao seu look, ela é o acessório ideal para quem valoriza
+                funcionalidade e consciência ambiental. Carregue mais do que itens, carregue um propósito com a Tolus
+                Spring!
+            </div>
+            <button class="buy-now-btn">Comprar</button>
+        </div>
+    </div>
+
+    <div class="product-img">
+        <h2>Detalhes - Tolus Spring</h2>
+        <p>Descubra a nova coleção Tolus Spring. Esta bolsa ecológica é feita com materiais sustentáveis<br> e foi
+            projetada
+            para combinar estilo e praticidade.</p>
+        <img src="assets/Eco_Bag000.jpg" alt="imagem grande" class="big-img">
+        <div class="sm-img">
+            <img src="assets/Eco02.jpg" alt="imagem grande">
+            <img src="assets/Eco03.jpg" alt="imagem grande">
+        </div>
+    </div>
+
+    <script>
+        // Alternar imagem principal ao clicar nas miniaturas
+        const thumbnails = document.querySelectorAll('.thumbnail');
+        const mainImage = document.querySelector('.main-image');
+
+        thumbnails.forEach(thumbnail => {
+            thumbnail.addEventListener('click', () => {
+                thumbnails.forEach(t => t.classList.remove('active'));
+                thumbnail.classList.add('active');
+                mainImage.src = thumbnail.src;
+            });
+        });
+    </script>
+</body>
+
+</html>
