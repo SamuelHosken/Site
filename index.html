@@ -191,6 +191,7 @@
         }
 
         .new-collection h2 {
+            color: #342013;
             margin-top: 10px;
             font-size: 2.2em;
         }
@@ -259,10 +260,10 @@
                 <img id="logo-img" src="/assets/logo_preta.png" alt="Logo" class="me-2" style="height: 30px;">
             </div>
             <nav class="d-none d-lg-flex gap-4">
-                <a href="#" class="nav-link active">Home</a>
-                <a href="#" class="nav-link">Shop</a>
-                <a href="#" class="nav-link">Especificações</a>
-                <a href="#" class="nav-link">Sobre Nós</a>
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#shop" class="nav-link">Shop</a>
+                <a href="#specs" class="nav-link">Especificações</a>
+                <a href="#about" class="nav-link">Sobre Nós</a>
             </nav>
             <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="offcanvas"
                 data-bs-target="#mobileMenu" aria-controls="mobileMenu">
@@ -282,11 +283,11 @@
                 <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
             <div class="offcanvas-body">
-                <nav class="d-flex flex-column gap-3">
-                    <a href="#" class="nav-link active">Home</a>
-                    <a href="#" class="nav-link">Shop</a>
-                    <a href="#" class="nav-link">Especificações</a>
-                    <a href="#" class="nav-link">Sobre Nós</a>
+                <nav class="d-none d-lg-flex gap-4">
+                    <a href="#home" class="nav-link active">Home</a>
+                    <a href="#shop" class="nav-link">Shop</a>
+                    <a href="#specs" class="nav-link">Especificações</a>
+                    <a href="#about" class="nav-link">Sobre Nós</a>
                 </nav>
             </div>
         </div>
@@ -309,7 +310,7 @@
         </div>
     </section>
 
-    <section class="new-collection py-5">
+    <section id="shop" class="new-collection py-5">
         <div class="container">
             <div class="text-center mb-4">
                 <h2 class="fw-bold">PRIMAVERA COLLECTION</h2>
@@ -381,7 +382,7 @@
         </div>
     </section>
 
-    <section class="text-section py-5">
+    <section id="specs" class="text-section py-5">
         <div class="container">
             <div class="border-top border-bottom py-4">
                 <div class="text row text-center text-md-start">
@@ -405,7 +406,7 @@
         </div>
     </section>
 
-    <section class="about-section py-5">
+    <section id="about" class="about-section py-5">
         <div class="container">
             <div class="text-center mb-5">
                 <h2 class="fw-bold">Sobre Nós</h2>
