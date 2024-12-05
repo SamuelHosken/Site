@@ -196,6 +196,10 @@
             font-size: 2.2em;
         }
 
+        .new-collection h2.dark-mode {
+            color: #ffffff;
+        }
+
         .new-collection .sub {
             margin-bottom: 100px;
         }
@@ -283,7 +287,7 @@
                 <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
             <div class="offcanvas-body">
-                <nav class="d-none d-lg-flex gap-4">
+                <nav class="d-flex flex-column gap-3">
                     <a href="#home" class="nav-link active">Home</a>
                     <a href="#shop" class="nav-link">Shop</a>
                     <a href="#specs" class="nav-link">Especificações</a>
@@ -536,7 +540,7 @@
     const footerLogoImg = document.getElementById('footer-logo-img');
     toggleDarkMode.addEventListener('click', () => {
         document.body.classList.toggle('dark-mode');
-        document.querySelectorAll('.header, .nav-link, .cart-circle, .footer-section, .footer-bar, .card, .card-body, p, .bnt-on-off, .text-success').forEach(el => {
+        document.querySelectorAll('.header, .nav-link, .cart-circle, .footer-section, .footer-bar, .card, .card-body, p, .bnt-on-off, .text-success, h2').forEach(el => {
             el.classList.toggle('dark-mode');
         });
         if (document.body.classList.contains('dark-mode')) {
